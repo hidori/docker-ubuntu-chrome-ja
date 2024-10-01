@@ -1,4 +1,4 @@
-FROM node:lts
+FROM node:20.17-slim
 
 RUN apt update \
     && DEBIAN_FRONTEND=noninteractive apt install -y \
