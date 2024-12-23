@@ -1,4 +1,4 @@
-FROM node:20.17
+FROM node:23.5
 
 RUN apt update \
     && DEBIAN_FRONTEND=noninteractive apt install -y \
