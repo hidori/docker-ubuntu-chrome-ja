@@ -20,6 +20,6 @@ pull: rmi
 run:
 	docker run -it --rm --privileged \
 		-u `id -u`:`id -g` \
-		-v $$PWD/tmp:/workdir \
+		-v ${PWD}:${PWD} \
 		$(IMAGE_NAME) \
-		google-chrome --no-sandbox --headless --screenshot=/workdir/screenshot.png --window-size=1024,768 https://www.google.co.jp
+		google-chrome --no-sandbox --headless --screenshot=${PWD}/screenshot.png --window-size=1024,768 https://www.google.co.jp
